@@ -1,12 +1,20 @@
 <h1>List of Cocktails</h1>
 
+<div class="container max-width">
 
-<div class="container w-100">
-<% @cocktails.each do |cocktail| %>
-<div class="card">
-  <p><%= link_to "#{cocktail.name}", cocktail_path(cocktail) %></p>
-  </div>
-<% end %>
+<div class="big_container">
+  <% @cocktails.each do |cocktail| %>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60"/>
+          <%= link_to "#{cocktail.name}", cocktail_path(cocktail) %>
+          <% cocktail.ingredients.each do |ingredient| %>
+          <p class="card-text">
+            <% "#{ingredient.name}" %>
+            <% end %>
+          </p>
+    </div>
+  <% end %>
 </div>
 
-<%= link_to "+ Create a new cocktail", new_cocktail_path %>
+<button type="button" class="btn btn-primary"><%= link_to "+ Create a new cocktail", new_cocktail_path %></button>
+</div>

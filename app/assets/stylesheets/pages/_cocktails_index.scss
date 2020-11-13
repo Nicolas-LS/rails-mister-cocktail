@@ -1,0 +1,38 @@
+.container {
+  border: 1px solid black;
+}
+
+.big_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  // box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  // padding: 8px
+}
+
+.card {
+  width: 300px;
+  border: 1px solid red;
+  border-radius: 15px 50px;
+}
+
+.card img {
+  object-fit: cover;
+  height: 300px;
+  border-radius: 15px 50px 0px 0px;
+}
+
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 15px 50px 0px 0px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
